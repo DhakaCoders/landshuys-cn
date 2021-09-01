@@ -456,14 +456,10 @@ body.allWork .hamburgar-cross{
 		-webkit-transition: all 0.5s;
 	}
 	nav.main-nav > ul > li.menu-item-has-children.this-sub-menu-active > a:before {
-		transform: rotate(
-			-180deg
-			);
+		transform: rotate(-180deg);
 		-o-transform: rotate(-180deg);
 		-ms-transform: rotate(-180deg);
-		-webkit-transform: rotate(
-			-180deg
-			);
+		-webkit-transform: rotate(-180deg);
 	}
 
 
