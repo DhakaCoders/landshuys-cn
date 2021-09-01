@@ -1,7 +1,4 @@
----------------------
-Start blog
----------------------
-*/
+
 .page-content{
 	padding: 0 0 150px;
 }
@@ -28,6 +25,7 @@ Start blog
 }
 .post-sec-cntrl{
 	display: flex;
+	padding-top: 40px;
 }
 .post-items{
 	max-width: 70%;
@@ -121,6 +119,9 @@ Start blog
 .search input[type="search"]:focus{
 	border: 1px solid #000;
 	border-radius: 2px;
+}
+.search-form .search input[type="search"] {
+    background: transparent;
 }
 .right-sidebar .sidebar-widget input[type="submit"]{
 	position: absolute;
