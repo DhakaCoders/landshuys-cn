@@ -64,6 +64,7 @@
 	line-height: 1;
 	font-weight: 400;
 	text-transform: capitalize;
+	text-decoration: none;
 }
 .country-flag{
 	padding-left: 10px;
@@ -94,6 +95,7 @@ nav.main-nav ul li a{
 	color: #fff;
 	font-family: 'Vollkorn', serif;
 	font-weight: 400;
+	text-decoration: none;
 }
 nav.main-nav > ul{
 	display: flex;
@@ -199,6 +201,7 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	background: #f9dca0;
 	color: #312828;
 	padding: 12px 20px;
+	border-radius: 2px;
 }
 nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a:hover{
 	background: #e0b870;
