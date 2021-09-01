@@ -172,4 +172,28 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     new WOW().init();
 
+
+
+    /*start of Noyon*/
+    if( $('.hamburger-cntlr').length ){
+      $('.hamburger-cntlr').click(function(){
+        $('body').toggleClass('allWork');
+      });
+    }
+    if( $('li.menu-item-has-children a').length ){
+      $('li.menu-item-has-children a').click(function(e){
+       event.preventDefault();
+       $(this).next().slideToggle(300);
+       $(this).parent().toggleClass('this-sub-menu-active');
+     });
+    }
+
+
+    
+     /*start of shariful*/
+
+
+
+     /*start of keshob*/
+
 })(jQuery);
