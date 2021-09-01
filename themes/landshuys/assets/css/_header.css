@@ -27,14 +27,8 @@
 	align-items: center;
 	flex-wrap: wrap;
 }
-.hdr-country{
+/*.hdr-country{
 	padding-right: 16px;
-}
-.hdr-country ul{
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	margin: 0 -5px;
 }
 .hdr-country ul li{
 	padding: 0 5px;
@@ -55,7 +49,120 @@
 }
 .country-flag{
 
+}*/
+/*language*/
+.hdr-language{
+	padding-right: 16px;
 }
+
+.fl-lang{
+	padding: 0 0 0 0;
+	display: flex;
+	align-items: center;
+}
+.fl-lang-cntlr{
+	position: relative;
+	min-height: 36px;
+	margin-right: 0;
+	padding-left: 0;
+	min-width: 100px;
+}
+.fl-lang ul li.lang-active{
+	position: relative;
+	opacity: 1;
+	padding-top: 0;
+	
+}
+.fl-lang ul li:hover a,
+.fl-lang ul li.lang-active a{
+	font-size: 15px;
+	color: #fff;
+}
+.fl-lang ul li{
+	position: absolute;
+	text-align: left;
+	left: 0;
+	right: 0;
+	top: 3px;
+	opacity: 0;
+	z-index: 22;
+}
+.fl-lang ul li a{
+	color: #fff;
+	font-family: 'Vollkorn', serif;
+	font-size: 15px;
+	line-height: 1;
+	font-weight: 400;
+	text-transform: capitalize;
+	color: #e0b870;
+}
+.fl-lang-cntlr:after{
+	background-image: url('../images/bottom-arrow.svg');
+	background-repeat: no-repeat;
+	content: "";
+	width: 11px;
+	height: 7px;
+	background-size: contain;
+    padding-right: 0;
+    position: absolute;
+    top: 20px;
+    right: 31px;
+    z-index: 21;
+    transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.fl-lang-cntlr:hover:after{
+	transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	-webkit-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+}
+.fl-lang ul li a:hover,
+.hdr-wishlist-btn strong:hover,
+.hdr-search button:hover{
+	/*color: #FF674D;*/
+	opacity: 0.8;
+}
+.fl-lang-cntlr ul{
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 20;	
+}
+.fl-lang-cntlr:hover ul{
+	background-color: transparent;
+	/*-webkit-box-shadow: 0px 0px 14px -2px rgba(240,240,240,1);
+	-moz-box-shadow: 0px 0px 14px -2px rgba(240,240,240,1);
+	box-shadow: 0px 0px 14px -2px rgba(240,240,240,1);*/
+	text-align: left;
+}
+.fl-lang-cntlr:hover{
+	overflow: initial;
+}
+.fl-lang-cntlr:hover li.lang-active,
+.fl-lang-cntlr:hover li{
+	position: relative;
+	opacity: 1!important;
+	padding-top: 0;
+	padding-right: 22px;
+}
+.country-flag{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	height: 19px;
+	width: 33px;
+}
+
+
+/*language*/
+
+
 .hdr-menu{
 	padding: 0 32px;
 	background: url('../images/menu-overlay.png');

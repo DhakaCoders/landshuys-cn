@@ -168,6 +168,10 @@
 	line-height: 1;
 	color: #312828;
 }
-.ftr-country{
+.ftr-lang{
 	margin-left: auto;
+	
+}
+.ftr-lang .fl-lang ul li a{
+	color: #312828;
 }
