@@ -119,9 +119,9 @@
 	border: 1px solid #000;
 	border-radius: 2px;
 }
-.search-form .search input[type="search"] {
+/*.search-form .search input[type="search"] {
     background: transparent;
-}
+}*/
 .right-sidebar .sidebar-widget input[type="submit"] {
     position: absolute;
     background: url(../images/search-icon.png);
