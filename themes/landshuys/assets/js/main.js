@@ -175,8 +175,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
     /*start of Noyon*/
-    if( $('.hamburger-cntlr').length ){
-      $('.hamburger-cntlr').click(function(){
+    if( $('.hamburgar-cntlr').length ){
+      $('.hamburgar-cntlr').click(function(){
         $('body').toggleClass('allWork');
       });
     }
