@@ -15,10 +15,13 @@ a, a:hover, a:focus, button:hover, button:focus{
 	outline: 0;
 }
 a{
-	color: #324a2a;
+	color: #2f4222;
+	text-decoration: underline;
+	font-weight: 400;
 }
 a:hover{
-	color: #e0b870;
+	text-decoration: none;
+	color: #2f4222;
 }
 
 body {
@@ -34,6 +37,17 @@ body {
 p{
 	line-height: 1.3;
 	margin-bottom: 20px;
+}
+strong,b{
+	font-weight: 700;
+}
+em,i{
+	font-family: 'Vollkorn', serif;
+	font-weight: 400;
+	font-style: italic;
+}
+u{
+	text-decoration: underline;
 }
 ::selection {
   color: #fff;
