@@ -89,6 +89,7 @@
 }
 .sidebar-widget ul li a{
 	color: inherit;
+	text-decoration: none;
 }
 
 .sp-detail{
