@@ -4,6 +4,7 @@
   <title>index page</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#f9ddaa">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
@@ -19,15 +20,16 @@
   <link rel="stylesheet" type="text/css" href="assets/fancybox3/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" type="text/css" href="assets/slick.slider/slick-theme.css">
   <link rel="stylesheet" type="text/css" href="assets/slick.slider/slick.css">
-  <!-- google font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/fonts/custom-fonts.css">
 
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
@@ -50,19 +52,12 @@
               </div>
             </div>
             <div class="hdr-rgt">
-              <div class="hdr-country">
-                <ul class="reset-list">
-                  <li>
-                    <div class="country-item">
-                      <span class="country-name">Deutsch</span>
-                      <div class="country-flag">
-                        <img src="assets/images/duch-flag.png" alt="">
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+ 
+              <div class="hdr-language fl-lang hide-md">
+                <a href="#">Deutsch<span class="country-flag"><img src="assets/images/country-flag.png" alt=""></span></a>
               </div>
-              <div class="hdr-menu">
+
+              <div class="hdr-menu hide-md">
                 <nav class="main-nav">
                   <ul class="clearfix reset-list">
                     <li class="current-menu-item"><a href="#">Menukaarten</a></li>
@@ -79,12 +74,12 @@
                   </ul>
                 </nav>
               </div>
-              <div class="hdr-tel show-md">
-                <img src="assets/images/tel-icon.png" alt="">
+              <div class="hdr-tel">
+                <a href="tel: +31(0) 599 354514"><img src="assets/images/tel-icon.png" alt=""></a>
               </div>
-              <div class="hamburgar-cntlr show-md">
+              <div class="hamburgar-cntlr">
                 <span>menu</span>
-                <div class="hamburgar">
+                <div class="hamburgar-icon">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -96,6 +91,29 @@
       </div>
   </div>
 </header>
+
+<div class="xs-mobile-menu">
+  <div class="hamburgar-cntlr hamburgar-cross">
+    <img src="assets/images/cross-icon.png" alt="">
+  </div>
+  <div class="xs-menu">
+    <nav class="main-nav">
+      <ul class="clearfix reset-list">
+        <li class="current-menu-item"><a href="#">Home</a></li>
+        <li class="menu-item-has-children">
+          <a href="#">Menukaarten</a>
+          <ul class="sub-menu reset-list">
+            <li><a href="#">Kleine kaart</a></li>
+            <li><a href="#">Grote kaart</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Arrangementen</a></li>
+        <li><a href="#">Restaurant  Reserveren</a></li>
+        <li><a href="#">Contact</a></li> 
+      </ul>
+    </nav>
+  </div>
+</div>
 
 
 <section class="page-banner-cntlr">
@@ -301,6 +319,18 @@
                   <li>&nbsp; &nbsp;Buiten onze normale <br> openingstijden uitsluitend <br>op aanvraag</li>
                   <li>&nbsp; &nbsp;Grote kaart donderdag t/m <br>zondag vanaf 17.00</li>
                 </ul>
+              </div>
+            </div>
+
+            <div class="ftr-col ftr-col-04">
+              <div class="ftr-col-information">
+                <ol>
+                  <li>Acceptant diner cadeau</li>
+                  <li>Acceptant VVV dinercheque</li>
+                </ol>
+              </div>
+              <div class="ftr-lang fl-lang">
+                <a href="#">Deutsch<span class="country-flag"><img src="assets/images/country-flag.png" alt=""></span></a>
               </div>
             </div>
           </div>
