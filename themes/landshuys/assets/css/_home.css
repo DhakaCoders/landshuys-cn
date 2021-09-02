@@ -44,3 +44,56 @@
 .hm-page-bnr-title{
 	margin-bottom: 10px;
 }
+
+
+
+
+
+.hm-lftdes-rgtimg-sec{
+	padding: 50px 0 80px;
+}
+
+.hm-lft-des{
+	float: left;
+	width: 50%;
+	padding-right: 40px;
+}
+.hm-rgt-img{
+	float: left;
+	width: 50%;
+}
+
+
+
+
+.hm-lftimg-rgtdes-sec{
+	padding-bottom: 50px;
+}
+.hm-lftimg-rgtdes-sec-inr{
+	padding-right: 140px;
+	display: flex;
+	align-items: center;
+}
+.hm-lft-img{
+	width: 36%;
+	position: relative;
+	z-index: 2;
+}
+.hm-rgt-des{
+	width: 64%;
+	position: relative;
+	z-index: 1;
+	padding-left: 90px;
+	margin-left: -20px;
+	background: url('../images/hm-des-img-03.png');
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center center!important;
+	color: #fff;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+}
+.hm-lft-img img{
+	width: 100%;
+}
