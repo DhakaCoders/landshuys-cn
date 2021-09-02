@@ -69,10 +69,13 @@
 	margin-top: -3px
 }
 .post-des h4 a{
-    color: #303037;
+    text-decoration: none;
+}
+.post-des p a {
+    text-decoration: none;
 }
 .post-des h4 a:hover{
-    color: #e61c29;
+    color: #314827;
 }
 .sidebar-widget h4{
 	border-bottom: 1px solid #312828;
@@ -144,6 +147,10 @@
 .right-sidebar .sidebar-widget label{
 	width: 100%;
 }
+
+
+
+
 
 
 
