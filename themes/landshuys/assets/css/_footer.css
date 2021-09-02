@@ -32,6 +32,10 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+.ftr-col-04{
+	display: none;
+	flex-wrap: wrap;
+}
 .fl-h4.ftr-col-title{
 	color: #e0b86f;
 	font-weight: 400;
@@ -181,4 +185,67 @@
 }
 .ftr-lang.fl-lang a:hover{
 	color: #fff;
+}
+
+/*responsive*/
+@media(max-width: 991px){
+	.footer-top{
+		padding-bottom: 25px;
+	}
+	.ftr-col{
+		padding-right: 0;
+		width: 100%;
+	}
+	.ftr-col-04{
+		display: flex;
+	}
+	.ftr-col-02{
+		padding-bottom: 150px;
+	}
+	.fl-h4.ftr-col-title{
+		margin-bottom: 25px;
+		font-size: 38px;
+	}
+	.ftr-add-details-col{
+		margin-bottom: 30px;
+		line-height: 1.2;
+	}
+	.ftr-add-details-col span,
+	.ftr-add-details-col a{
+		line-height: 1.2;
+		font-size: 24px;
+	}
+	.ftr-col-information{
+		padding-right: 10px;
+	}
+	.ftr-col-information ol:last-of-type{
+		margin-bottom: 0!important;
+	}
+	.ftr-col-information ol li:last-child{
+		padding-bottom: 0!important;
+	}
+	.ftr-lang{
+		margin-top: auto;
+	}
+	.ftr-lang.ftr-lang a{
+		color: #fff;
+	}
+	.ftr-copyright{
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+	.ftr-copyright p{
+		font-size: 20px;
+	}
+}
+@media(max-width: 479px){
+	.ftr-col-04{
+		display: block;
+	}
+	.ftr-col-information{
+		padding-right: 0;
+		width: 100%;
+		margin-bottom: 20px;
+	}
 }
