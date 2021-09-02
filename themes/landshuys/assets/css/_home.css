@@ -269,6 +269,9 @@
 	.hm-lft-des-title{
 		margin-bottom: 10px;
 	}
+	.hm-lftimg-rgtdes-title{
+		margin-bottom: 10px;
+	}
 }
 @media(max-width: 575px){
 	.hm-page-banner {
