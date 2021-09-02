@@ -330,42 +330,32 @@ body.allWork .hamburgar-cross{
 /* responsive*/
 @media (max-width: 1699px){
 	.logo a{
-		max-width: 170px;
+		max-width: 150px;
 		height: auto;
 	}
 	.hdr-menu{
 		padding: 0 15px;
 	}
 	nav.main-nav > ul{
-		margin: 0 -15px;
+		margin: 0 -20px;
 	}
 	nav.main-nav > ul > li{
-		padding: 0 15px;
+		padding: 0 20px;
 	}
 	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu > li > a,
 	nav.main-nav > ul > li > a{
-		font-size: 22px;
+		font-size: 21px;
 	}
 }
 @media (max-width: 1499px){
 
 }
 @media (max-width: 1399px){
-	.logo a{
-		max-width: 155px;
-	}
 	.hdr-menu{
 		padding: 0 15px;
-	}
-	nav.main-nav > ul{
-		margin: 0 -10px;
-	}
-	nav.main-nav > ul > li{
-		padding: 0 10px;
-	}
-	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu > li > a,
+	}	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu > li > a,
 	nav.main-nav > ul > li > a{
-		font-size: 20px;
+		font-size: 19px;
 	}
 	.hdr-language {
 		padding-right: 10px;
@@ -376,7 +366,17 @@ body.allWork .hamburgar-cross{
 }
 @media (max-width: 1199px){
 	.logo a{
-		max-width: 145px;
+		max-width: 130px;
+	}
+	nav.main-nav > ul{
+		margin: 0 -17px;
+	}
+	nav.main-nav > ul > li{
+		padding: 0 17px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu > li > a,
+	nav.main-nav > ul > li > a{
+		font-size: 18px;
 	}
 }
 @media (max-width: 991px){
@@ -487,7 +487,7 @@ body.allWork .hamburgar-cross{
 		height: auto;
 	}
 }
-@media (max-width: 479px){
+/*@media (max-width: 479px){
 	nav.main-nav > ul > li > a{
 		font-size: 28px;
 	}
@@ -497,4 +497,4 @@ body.allWork .hamburgar-cross{
 	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 		font-size: 24px;
 	}
-}
+}*/

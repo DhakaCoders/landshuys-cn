@@ -13,7 +13,7 @@
     min-height: 400px;
 }
 .page-404 h1{
-	font-size: 73px;
+	font-size: 90px;
 }
 .page-404 h3{
 	font-size: 28px;
@@ -70,15 +70,30 @@
 }
 .post-des h4 a{
     text-decoration: none;
+    color: #000;
 }
 .post-des p a {
     text-decoration: none;
+    position: relative;
+    padding-right: 30px;
+    color: #000;
 }
-.post-des p a:hover{
-    color: #312828;
+.post-des p a:after{
+	content: ">>";
+	position: absolute;
+	right: 0;
+	top: 1.1px;
+	color: #000;
+	transition: all0.5s;
+	-webkit-transition: all0.5s;
+	-ms-transition: all0.5s;
+}
+.post-des p a:hover,
+.post-des p a:hover:after{
+    color: #314827;
 }
 .post-des h4 a:hover{
-    color: #312828;
+    color: #314827;
 }
 .sidebar-widget h4{
 	border-bottom: 1px solid #312828;
@@ -94,10 +109,12 @@
 	font-size: 16px;
 }
 .sidebar-widget ul li a{
-	color: inherit;
+	color: #000;
 	text-decoration: none;
 }
-
+.sidebar-widget ul li a:hover{
+	color: #314827;
+}
 .sp-detail{
 	width: 70%;
 	margin-right: 0;
@@ -251,7 +268,7 @@
 
 @media(max-width: 1199px){
 	.page-404 h1{
-		font-size: 64px;
+		font-size: 70px;
 	}
 	.post-items{
 		max-width: 65%;
@@ -264,7 +281,7 @@
 
 @media(max-width: 991px){
 	.page-404 h1{
-		font-size: 44px;
+		font-size: 60px;
 	}
 	.post-img {
     	width: 100%;
@@ -311,6 +328,9 @@
 	.right-sidebar{
 		padding-right: 0;
 	}
+	.page-404 h1{
+		font-size: 50px;
+	}
 }
 
 @media(max-width: 575px){
@@ -320,7 +340,7 @@
 
 @media(max-width: 479px){
 	.page-404 h1{
-		font-size: 38px;
+		font-size: 40px;
 	}
 
 }
