@@ -39,5 +39,8 @@
 	text-align: right;
 }
 .hm-page-bnr-des-inr{
-	padding: 10px 0;
+	padding-top: 10px;
+}
+.hm-page-bnr-title{
+	margin-bottom: 10px;
 }
