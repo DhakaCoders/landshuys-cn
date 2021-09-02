@@ -152,9 +152,9 @@
 	}
 }
 @media(max-width: 1399px){
-	/*.hm-page-banner{
+	.hm-page-banner{
 		height: 620px;
-	}*/
+	}
 	.hm-lft-des{
 		padding-right: 0;
 	}
@@ -166,9 +166,9 @@
 	}
 }
 @media(max-width: 1199px){
-	/*.hm-page-banner {
+	.hm-page-banner {
 	    height: 500px;
-	}*/
+	}
 	.hm-des-top{
 		left: -27px;
     	right: -18px;
@@ -189,9 +189,9 @@
 	}
 }
 @media(max-width: 991px){
-	/*.hm-page-banner {
+	.hm-page-banner {
 	    height: 450px;
-	}*/
+	}
 	.hm-page-bnr-des{
 		bottom: 30px;
 	}
