@@ -213,7 +213,7 @@
 	}
 	.fl-h4.ftr-col-title{
 		margin-bottom: 25px;
-		font-size: 38px;
+		font-size: 40px;
 	}
 	.ftr-add-details-col{
 		margin-bottom: 30px;
@@ -265,6 +265,9 @@
 	}
 	.ftr-copyright p{
 		font-size: 20px;
+	}
+	.fl-h4.ftr-col-title{
+		font-size: 38px;
 	}
 }
 @media(max-width: 479px){
