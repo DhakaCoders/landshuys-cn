@@ -74,6 +74,9 @@
 .post-des p a {
     text-decoration: none;
 }
+.post-des p a:hover{
+    color: #314827;
+}
 .post-des h4 a:hover{
     color: #314827;
 }
@@ -198,16 +201,16 @@
 	justify-content: center;
 	align-items: center;
 	color: #fff;
-	background: #1a67b0;
+	background: #314827;
 	padding: 2px;
 }
 .fl-pagi-cntlr ul li a:hover,
 .fl-pagi-cntlr ul li span:hover{
 	color: #303037;
-	background: #fff;
+	background: transparent;
 }
 .page-numbers.current{
-	background: #d0d0d0;
+	background: transparent;
 }
 .fl-pagi-cntlr .prev, .fl-pagi-cntlr .next{
 	position: relative;
@@ -234,7 +237,7 @@
 }
 .fl-pagi-cntlr .prev:hover,
 .fl-pagi-cntlr .next:hover{
-	background: #303037!important;
+	background: #312828!important;
 	/* border: 1px solid #fff; */
 }
 .opacity{
