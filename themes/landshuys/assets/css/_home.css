@@ -1,0 +1,43 @@
+.hm-page-bnr-cntlr{
+	position: relative;
+	text-align: center;
+}
+.hm-page-banner{
+	height: 735px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-banner-bg{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.hm-page-bnr-des{
+	position: relative;
+	z-index: 3;
+
+}
+.hm-page-bnr-des-inr{
+	color: #fff;
+	position: relative;
+}
+
+
+.hm-page-bnr-des{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	background: rgba(48,67,42,0.85);
+	color: #fff;
+	text-align: right;
+}
+.hm-page-bnr-des-inr{
+	padding: 10px 0;
+}
