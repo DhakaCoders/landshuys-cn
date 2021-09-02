@@ -190,16 +190,25 @@
 	}
 	.hm-lft-img{
 		width: 100%;
+		margin-left: 0;
 	}
 	.hm-rgt-des{
 		width: 100%;
 		padding-left: 15px;
 		padding-right: 0;
-		margin-left: -15px;
-		margin-right: -15px;
+		margin-left: 0;
+		margin-right: 0;
 	}
 	.hm-des-rgt{
 		display: none;
+	}
+	.hm-des-top{
+		left: -19px;
+    	right: -27px;
+	}
+	.hm-des-btm{
+		left: -28px;
+    	right: -23px;
 	}
 }
 @media(max-width: 767px){
