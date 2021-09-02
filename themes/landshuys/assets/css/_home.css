@@ -40,7 +40,7 @@
 	color: #fff;
 	text-align: right;
 }
-.hm-page-bnr-des-inr{
+.hm-page-bnr-des-inr div{
 	padding-top: 10px;
 }
 .hm-page-bnr-title{
@@ -72,7 +72,8 @@
 	padding-bottom: 50px;
 }
 .hm-lftimg-rgtdes-sec-inr{
-	padding-right: 140px;
+	max-width: 1240px;
+	width: 100%;
 	display: flex;
 	align-items: center;
 }
@@ -80,6 +81,7 @@
 	width: 36%;
 	position: relative;
 	z-index: 2;
+	margin-left: -20px;
 }
 .hm-rgt-des{
 	width: 64%;
@@ -87,17 +89,45 @@
 	z-index: 1;
 	color: #fff;
 	background: #314827;
-	margin-left: -25px;
-	padding: 30px 20px 30px 60px;
+	margin-left: -73px;
+	padding: 0px 20px 0px 120px;
 }
 .hm-des-top{
 	position: absolute;
 	top: 0;
-	left: 0;
-	right: 0;
+	left: -27px;
+	right: -18px;
 	background: url('../images/hm-des-top.png');
 	background-size: 100% 100%!important;
 	background-position: center center!important;
+	height: 70px;
+	margin-top: -69px;
+}
+.hm-des-rgt{
+	position: absolute;
+	top: -36px;
+	bottom: -27px;
+	right: 0;
+	background: url('../images/hm-des-rgt.png');
+	background-size: 100% 100%!important;
+	background-position: center center!important;
+	width: 50px;
+	margin-right: -13px;
+}
+.hm-des-btm{
+	position: absolute;
+	bottom: 0;
+	left: -41px;
+	right: -25px;
+	background: url('../images/hm-des-btm.png');
+	background-size: 100% 100%!important;
+	background-position: center center!important;
+	height: 55px;
+	margin-bottom: -54px;
+}
+.hm-rgt-des-inr{
+	position: relative;
+	z-index: 9;
 }
 .hm-lft-img img{
 	width: 100%;
@@ -111,14 +141,14 @@
 	}
 }
 @media(max-width: 1399px){
-	/*.hm-page-banner{
-		height: 600px;
-	}*/
+	.hm-page-banner{
+		height: 620px;
+	}
 	.hm-lft-des{
 		padding-right: 0;
 	}
 	.hm-rgt-des{
-		padding-left: 40px;
+		padding-left: 80px;
 	}
 }
 @media(max-width: 1199px){

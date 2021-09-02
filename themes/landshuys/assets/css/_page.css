@@ -180,11 +180,12 @@ ol li::before {
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-    height: 6px;
-    width: 8px;
+    height: 8px;
+    width: 10px;
     margin-top: 0;
-    background-size: contain;
+    background-size: 100% auto!important;
     background-image: url(../images/star-icon.png);
+    background-repeat: no-repeat!important;
 }
 .breadcrumb-sec-inr ul li a, 
 .breadcrumb-sec-inr ul li span, 
