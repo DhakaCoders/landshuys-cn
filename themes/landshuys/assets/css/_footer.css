@@ -74,6 +74,11 @@
 	top: 7px;
 	left: 0;
 }
+.ftr-col-information ol li a,
+.ftr-col-information ul li a{
+	display: inline-block;
+	color: #ffeac3;
+}
 
 .ftr-col-information ol{
 	margin: 0 0 28px 0!important;
@@ -112,6 +117,8 @@
 .ftr-add-details-col{
 	margin-bottom: 25px;
 }
+.ftr-col-information ol li a:hover,
+.ftr-col-information ul li a:hover,
 .ftr-add-details-col a:hover{
 	color: #e0b870;
 }
@@ -174,6 +181,7 @@
 	font-style: italic;
 	font-weight: 300;
 	line-height: 1;
+	font-size: 22px;
 	color: #312828;
 }
 .ftr-lang{
@@ -184,10 +192,11 @@
 	color: #312828;
 }
 .ftr-lang.fl-lang a:hover{
-	color: #fff;
+	color: #e4e3e3;
 }
 
 /*responsive*/
+
 @media(max-width: 991px){
 	.footer-top{
 		padding-bottom: 25px;
@@ -213,7 +222,7 @@
 	.ftr-add-details-col span,
 	.ftr-add-details-col a{
 		line-height: 1.2;
-		font-size: 24px;
+		font-size: 25px;
 	}
 	.ftr-col-information{
 		padding-right: 10px;
@@ -229,11 +238,30 @@
 	}
 	.ftr-lang.ftr-lang a{
 		color: #fff;
+		font-size: 16px;
 	}
 	.ftr-copyright{
 		width: 100%;
 		display: block;
 		text-align: center;
+	}
+	.ftr-copyright p{
+		font-size: 21px;
+	}
+	.ftr-col-information ol li{
+		font-size: 21px;
+	}
+}
+@media(max-width: 767px){
+	.ftr-add-details-col span,
+	.ftr-add-details-col a{
+		font-size: 24px;
+	}
+	.ftr-lang.ftr-lang a{
+		font-size: 15px;
+	}
+	.ftr-col-information ol li{
+		font-size: 20px;
 	}
 	.ftr-copyright p{
 		font-size: 20px;
