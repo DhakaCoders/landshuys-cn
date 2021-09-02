@@ -148,16 +148,17 @@ ol li::before {
 }
 .breadcrumb-sec-inr ul li:after {
     position: absolute;
-    content: ">";
+    content: "";
     left: 0;
     top: 50%;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
-    margin-top: 2px;
-    color: #b9a98e;
-    font-size: 9px;
+    margin-top: 1px;
+    background: url('../images/breadcrumb-arrow.png');
+    height: 4px;
+    width: 4px;
 }
 .breadcrumb-sec-inr ul li:first-child:after{
 	display: none;
@@ -179,9 +180,9 @@ ol li::before {
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-    height: 8px;
-    width: 10px;
-    margin-top: -1px;
+    height: 6px;
+    width: 8px;
+    margin-top: 0;
     background-size: contain;
     background-image: url(../images/star-icon.png);
 }
