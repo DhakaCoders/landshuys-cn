@@ -83,8 +83,10 @@
 	z-index: 2;
 	margin-left: -20px;
 }
-.hm-rgt-des{
+.hm-rgt-des-ctlr{
 	width: 64%;
+}
+.hm-rgt-des{
 	position: relative;
 	z-index: 1;
 	color: #fff;
@@ -208,8 +210,11 @@
 		width: 40%;
 	    margin-left: -10px;
 	}
-	.hm-rgt-des{
+	.hm-rgt-des-ctlr{
 		width: 60%;
+	}
+	.hm-rgt-des{
+		
 		padding-left: 30px;
 	    margin-left: -25px;
 	}
@@ -251,8 +256,11 @@
 	.hm-page-banner {
 	    height: 400px;
 	}
-	.hm-rgt-des{
+	.hm-rgt-des-ctlr{
 		width: 100%;
+	}
+	.hm-rgt-des{
+		
 		margin-left: 0;
 	}
 	.hm-rgt-des-ctlr{
