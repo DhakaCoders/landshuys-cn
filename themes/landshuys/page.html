@@ -38,6 +38,7 @@
 
 </head>
 <body>
+<div class="bdoverlay"></div>
 <header class="header">
   <div class="container">
       <div class="row">
@@ -49,19 +50,12 @@
               </div>
             </div>
             <div class="hdr-rgt">
-              <div class="hdr-country">
-                <ul class="reset-list">
-                  <li>
-                    <div class="country-item">
-                      <span class="country-name">Deutsch</span>
-                      <div class="country-flag">
-                        <img src="assets/images/duch-flag.png" alt="">
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+ 
+              <div class="hdr-language fl-lang hide-md">
+                <a href="#">Deutsch<span class="country-flag"><img src="assets/images/country-flag.png" alt=""></span></a>
               </div>
-              <div class="hdr-menu">
+
+              <div class="hdr-menu hide-md">
                 <nav class="main-nav">
                   <ul class="clearfix reset-list">
                     <li class="current-menu-item"><a href="#">Menukaarten</a></li>
@@ -78,12 +72,12 @@
                   </ul>
                 </nav>
               </div>
-              <div class="hdr-tel show-md">
-                <img src="assets/images/tel-icon.png" alt="">
+              <div class="hdr-tel">
+                <a href="tel: +31(0) 599 354514"><img src="assets/images/tel-icon.png" alt=""></a>
               </div>
-              <div class="hamburgar-cntlr show-md">
+              <div class="hamburgar-cntlr">
                 <span>menu</span>
-                <div class="hamburgar">
+                <div class="hamburgar-icon">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -95,6 +89,30 @@
       </div>
   </div>
 </header>
+
+<div class="xs-mobile-menu">
+  <div class="hamburgar-cntlr hamburgar-cross">
+    <img src="assets/images/cross-icon.png" alt="">
+  </div>
+  <div class="xs-menu">
+    <nav class="main-nav">
+      <ul class="clearfix reset-list">
+        <li class="current-menu-item"><a href="#">Home</a></li>
+        <li class="menu-item-has-children">
+          <a href="#">Menukaarten</a>
+          <ul class="sub-menu reset-list">
+            <li><a href="#">Kleine kaart</a></li>
+            <li><a href="#">Grote kaart</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Arrangementen</a></li>
+        <li><a href="#">Restaurant</a></li>
+        <li><a href="#">Reserveren</a></li>
+        <li><a href="#">Contact</a></li> 
+      </ul>
+    </nav>
+  </div>
+</div>
 
 
 <section class="page-banner-cntlr">
@@ -169,9 +187,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="footer-top-cntlr">
-            <div class="ftr-col ftr-col-01">
-              <h4 class="fl-h4ftr-col-title">Informatie</h4>
+          <div class="footer-top-cntlr clearfix">
+            <div class="ftr-col ftr-col-01 hide-md">
+              <h4 class="fl-h4 ftr-col-title">Informatie</h4>
               <div class="ftr-col-information">
                 <ul>
                   <li>Groepen</li>
@@ -198,48 +216,48 @@
               </div>
             </div>
             <div class="ftr-col ftr-col-02">
-              <h4 class="fl-h4ftr-col-title">‘s Landshuys</h4>
+              <h4 class="fl-h4 ftr-col-title">‘s Landshuys</h4>
               <div class="ftr-col-add-details">
-                <div class="ftr-col-add">
-                  <span>adres:</span>
+                <div class="ftr-col-add ftr-add-details-col">
+                  <span><i>adres:</i></span><br>
                   <a href="#" target="_blank">Marktplein 2<br>9545 PH Bourtange<br>Nederland
                   </a>
                 </div>
-                <div class="ftr-col-tel">
-                  <span>telefoon:</span>
+                <div class="ftr-col-tel ftr-add-details-col">
+                  <span><i>telefoon:</i></span><br>
                   <a href="tel: +31(0)599354514">+31(0) 599 354514</a>
                 </div>
-                <div class="ftr-col-mail">
-                  <span>email::</span>
+                <div class="ftr-col-mail ftr-add-details-col">
+                  <span><i>email:</i></span><br>
                   <a href="mailto: info@landshuys.nl">info@landshuys.nl</a>
                 </div>
               </div>
             </div>
-            <div class="ftr-col ftr-col-03">
-              <h4 class="fl-h4ftr-col-title">Openingstijden</h4>
+            <div class="ftr-col ftr-col-03 hide-md">
+              <h4 class="fl-h4 ftr-col-title">Openingstijden</h4>
               <div class="ftr-col-opening-hours">
                 <ul class="reset-list">
-                  <li>
-                    <div class="ftr-col-opn-item-desc">
-                      <span>April t/m 28 oktober:</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="ftr-col-opn-item-desc">
-                      <span>Dagelijks geopend <br>vanaf 10 uur</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="ftr-col-opn-item-desc">
-                      <span>* Buiten onze normale <br> openingstijden uitsluitend <br>op aanvraag</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="ftr-col-opn-item-desc">
-                      <span>* Grote kaart donderdag t/m <br>zondag vanaf 17.00</span>
-                    </div>
-                  </li>
+                  <li><i>April t/m 28 oktober:</i></li>
+                  <li>Dagelijks geopend <br>vanaf 10 uur</li>
                 </ul>
+              </div>
+              <div class="ftr-col-normal-opening ftr-col-opening-star">
+                <ul class="reset-list">
+                  <li>&nbsp; &nbsp;Buiten onze normale <br> openingstijden uitsluitend <br>op aanvraag</li>
+                  <li>&nbsp; &nbsp;Grote kaart donderdag t/m <br>zondag vanaf 17.00</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="ftr-col ftr-col-04">
+              <div class="ftr-col-information">
+                <ol>
+                  <li>Acceptant diner cadeau</li>
+                  <li>Acceptant VVV dinercheque</li>
+                </ol>
+              </div>
+              <div class="ftr-lang fl-lang">
+                <a href="#">Deutsch<span class="country-flag"><img src="assets/images/country-flag.png" alt=""></span></a>
               </div>
             </div>
           </div>
@@ -255,19 +273,10 @@
             <div class="ftr-copyright">
               <p>&copy; 2021 Landshuys bourtange, alle rechten voorbehouden.  </p>
             </div>
-            <div class="ftr-country">
-                <ul class="reset-list">
-                  <li>
-                    <div class="country-item">
-                      <span class="country-name">Deutsch</span>
-                      <div class="country-flag">
-                        <img src="assets/images/duch-flag.png" alt="">
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-          </div>
+            <div class="ftr-lang fl-lang hide-md">
+              <a href="#">Deutsch<span class="country-flag"><img src="assets/images/country-flag.png" alt=""></span></a>
+           </div>
+         </div>
         </div>
       </div>
     </div>
