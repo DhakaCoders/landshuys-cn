@@ -192,6 +192,14 @@ google.maps.event.addDomListener(window, 'load', initialize);
     
      /*start of shariful*/
 
+     if (windowWidth > 767) {
+        if( $('.hm-page-banner').length ){
+          var windowHeight = $(window).height();
+          if (windowHeight >= 678) {
+            $('.hm-page-banner').css('height', windowHeight);
+          }
+        }
+      }
 
 
      /*start of keshob*/

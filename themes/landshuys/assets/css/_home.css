@@ -33,8 +33,10 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 20px;
-	background: rgba(48,67,42,0.85);
+	bottom: 35px;
+	background: url('../images/hm-page-bnr-des-img.png');
+	background-size: cover!important;
+	background-position: center center!important;
 	color: #fff;
 	text-align: right;
 }
@@ -83,17 +85,51 @@
 	width: 64%;
 	position: relative;
 	z-index: 1;
-	padding-left: 90px;
-	margin-left: -20px;
-	background: url('../images/hm-des-img-03.png');
-	background-repeat: no-repeat!important;
-	background-size: cover!important;
-	background-position: center center!important;
 	color: #fff;
-	padding-top: 40px;
-	padding-bottom: 20px;
-	padding-right: 20px;
+	background: #314827;
+	margin-left: -25px;
+	padding: 30px 20px 30px 60px;
+}
+.hm-des-top{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: url('../images/hm-des-top.png');
+	background-size: 100% 100%!important;
+	background-position: center center!important;
 }
 .hm-lft-img img{
 	width: 100%;
+}
+
+
+
+@media(max-width: 1699px){
+	.hm-lft-des{
+		padding-right: 20px;
+	}
+}
+@media(max-width: 1399px){
+	/*.hm-page-banner{
+		height: 600px;
+	}*/
+	.hm-lft-des{
+		padding-right: 0;
+	}
+	.hm-rgt-des{
+		padding-left: 40px;
+	}
+}
+@media(max-width: 1199px){
+	
+}
+@media(max-width: 991px){
+	
+}
+@media(max-width: 767px){
+	
+}
+@media(max-width: 575px){
+	
 }
