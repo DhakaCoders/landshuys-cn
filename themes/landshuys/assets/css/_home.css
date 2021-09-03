@@ -100,7 +100,7 @@
 	top: 0;
 	left: -27px;
 	right: -3px;
-	background: url('../images/hm-des-top2.png');
+	background: url('../images/hm-des-top.png');
 	background-size: 100% 100%!important;
 	background-position: center center!important;
 	height: 50px;
@@ -122,7 +122,7 @@
 	bottom: 0;
 	left: -41px;
 	right: -5px;
-	background: url('../images/hm-des-btm2.png');
+	background: url('../images/hm-des-btm.png');
 	background-size: 100% 100%!important;
 	background-position: center center!important;
 	height: 40px;
@@ -212,10 +212,10 @@
 	    margin-left: -30px;
 	}
 	.hm-des-top{
-		left: -20px;
+		left: -50px;
 	}
 	.hm-des-btm {
-	    left: -30px;
+	    left: -70px;
 	}
 	.hm-lftdes-rgtimg-sec {
 	    padding: 40px 0 30px;
@@ -248,12 +248,12 @@
 		margin-right: -20px;
 	}
 	.hm-des-top {
-	    left: -20px;
+	    left: -70px;
 	    right: -28px;
 	}
 	.hm-des-btm {
-	    left: -30px;
-	    right: -25px;
+	    left: -70px;
+	    right: -50px;
 	}
 	.hm-lftimg-rgtdes-sec{
 		overflow: hidden;
