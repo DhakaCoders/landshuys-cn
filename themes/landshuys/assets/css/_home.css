@@ -99,8 +99,8 @@
 	position: absolute;
 	top: 0;
 	left: -27px;
-	right: -18px;
-	background: url('../images/hm-des-top.png');
+	right: -3px;
+	background: url('../images/hm-des-top2.png');
 	background-size: 100% 100%!important;
 	background-position: center center!important;
 	height: 50px;
@@ -121,8 +121,8 @@
 	position: absolute;
 	bottom: 0;
 	left: -41px;
-	right: -25px;
-	background: url('../images/hm-des-btm.png');
+	right: -5px;
+	background: url('../images/hm-des-btm2.png');
 	background-size: 100% 100%!important;
 	background-position: center center!important;
 	height: 40px;
@@ -165,21 +165,19 @@
 @media(max-width: 1199px){
 	.hm-des-top{
 		left: -27px;
-    	right: -18px;
     	height: 50px;
     	margin-top: -49px;
 	}
 	.hm-des-btm{
 		left: -41px;
-	    right: -23px;
 	    height: 45px;
 	    margin-bottom: -44px;
 	}
 	.hm-des-rgt{
 		top: -27px;
-    	bottom: -24px;
+    	bottom: -15px;
         width: 40px;
-    	margin-right: -13px;
+    	margin-right: -10px;
 	}
 	.hm-rgt-des{
 		padding-left: 95px;
@@ -203,24 +201,21 @@
 		margin-right: auto;
 	}
 	.hm-lft-img{
-		width: 40%;
-	    margin-left: -10px;
+		width: 45%;
+	    margin-left: -22px;
 	}
 	.hm-rgt-des-ctlr{
-		width: 60%;
+		width: 55%;
 	}
 	.hm-rgt-des{
-		
-		padding-left: 30px;
-	    margin-left: -25px;
+		padding-left: 35px;
+	    margin-left: -30px;
 	}
 	.hm-des-top{
 		left: -20px;
-	    right: -18px;
 	}
 	.hm-des-btm {
 	    left: -30px;
-	    right: -17px;
 	}
 	.hm-lftdes-rgtimg-sec {
 	    padding: 40px 0 30px;
@@ -228,26 +223,7 @@
 	.hm-lftimg-rgtdes-sec{
 		overflow: hidden;
 	}
-	.hm-lftimg-rgtdes-sec-inr{
-		display: block;
-	}
-	.hm-lft-img{
-		width: 100%;
-	    margin-left: 0;
-	    padding-bottom: 40px;
-	}
-	.hm-lft-img-inr{
-		max-width: 400px;
-	    width: 100%;
-	    margin-left: auto;
-	    margin-right: auto;
-	}
-	.hm-rgt-des-ctlr{
-		width: 100%;
-	}
-	.hm-rgt-des{
-		margin-right: -20px;
-	}
+	
 	
 }
 @media(max-width: 767px){
@@ -287,6 +263,26 @@
 	}
 	.hm-lftimg-rgtdes-title{
 		margin-bottom: 10px;
+	}
+	.hm-lftimg-rgtdes-sec-inr{
+		display: block;
+	}
+	.hm-lft-img{
+		width: 100%;
+	    margin-left: 0;
+	    padding-bottom: 40px;
+	}
+	.hm-lft-img-inr{
+		max-width: 400px;
+	    width: 100%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.hm-rgt-des-ctlr{
+		width: 100%;
+	}
+	.hm-rgt-des{
+		margin-right: -20px;
 	}
 }
 @media(max-width: 575px){
