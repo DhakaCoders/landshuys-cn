@@ -99,7 +99,7 @@
 	position: absolute;
 	top: 0;
 	left: -27px;
-	right: -3px;
+	right: -4px;
 	background: url('../images/hm-des-top.png');
 	background-size: 100% 100%!important;
 	background-position: center center!important;
@@ -108,7 +108,7 @@
 }
 .hm-des-rgt{
 	position: absolute;
-	top: -28px;
+	top: -20px;
 	bottom: -16px;
 	right: 0;
 	background: url('../images/hm-des-rgt.png');
@@ -121,7 +121,7 @@
 	position: absolute;
 	bottom: 0;
 	left: -41px;
-	right: -5px;
+	right: -6px;
 	background: url('../images/hm-des-btm.png');
 	background-size: 100% 100%!important;
 	background-position: center center!important;
@@ -174,13 +174,18 @@
 	    margin-bottom: -44px;
 	}
 	.hm-des-rgt{
-		top: -27px;
     	bottom: -15px;
         width: 40px;
     	margin-right: -10px;
 	}
 	.hm-rgt-des{
 		padding-left: 95px;
+	}
+	.hm-des-top{
+		right: -3px;
+	}
+	.hm-des-btm{
+		right: -5px;
 	}
 }
 @media(max-width: 991px){
