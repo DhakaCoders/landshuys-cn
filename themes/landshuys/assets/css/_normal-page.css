@@ -39,3 +39,29 @@
 
 
 
+@media(max-width: 1399px){
+	.page-content-sec {
+	    padding: 50px 0;
+	}
+}
+
+@media(max-width: 991px){
+	.page-banner{
+		height: 300px;
+	}
+	.page-content-sec {
+	    padding: 40px 0;
+	}
+}
+@media(max-width: 767px){
+	.page-banner{
+		height: 250px;
+	}
+	.page-content-sec {
+	    padding: 30px 0;
+	}
+}
+
+
+
+
