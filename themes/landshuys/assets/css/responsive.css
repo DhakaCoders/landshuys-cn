@@ -22,7 +22,7 @@
 		font-size: 26px;
 	}
 	body{
-		font-size: 22px;
+		font-size: 20px;
 	}
 }
 @media (max-width: 1499px) {
@@ -161,7 +161,7 @@
 		font-size: 20px;
 	}
 	body{
-		font-size: 20px;
+		font-size: 17px;
 	}
 	p{
 		margin-bottom: 15px;
