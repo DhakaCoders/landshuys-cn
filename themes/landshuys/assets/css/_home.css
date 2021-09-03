@@ -292,10 +292,16 @@
 	.hm-page-bnr-des{
 		bottom: 25px;
 	}
+	.hm-des-btm {
+	    right: -35px;
+	}
 }
 
 @media(max-width: 479px){
 	.hm-page-bnr-title{
 		font-size: 33px!important;
+	}
+	.hm-des-btm {
+	    right: -30px;
 	}
 }
