@@ -35,9 +35,9 @@ if( !function_exists('cbv_theme_setup') ){
         ) );
 
         register_nav_menus( array(
-            'cbv_main_menu' => __( 'Hoofdmenu', THEME_NAME ),
-            'cbv_fta_menu' => __( 'Footer Menu 1', THEME_NAME ),
-            'cbv_copyright_menu' => __( 'Copyright Menu', THEME_NAME ),
+            'cbv_main_menu' => __( 'Main Menu', 'landshuys' ),
+            'cbv_mobile_main_menu' => __( 'Mobile Menu', 'landshuys' ),
+            'cbv_copyright_menu' => __( 'Copyright Menu', 'landshuys' ),
         ) );
 
     }
@@ -77,8 +77,8 @@ if( function_exists('acf_add_options_page') ) {
     //parent tab
     //acf_add_options_page( 'Opties' );
     acf_add_options_page(array(
-        'page_title'    => __('Options', THEME_NAME),
-        'menu_title'    => __('Options', THEME_NAME),
+        'page_title'    => __('Options', 'landshuys'),
+        'menu_title'    => __('Options', 'landshuys'),
         'menu_slug'     => 'cbv_options',
         'capability'    => 'edit_posts',
         //'redirect'        => false
@@ -175,6 +175,11 @@ function custom_post_type_query($query) {
 }
  
 add_filter('pre_get_posts','custom_post_type_query');
+
+add_action('do_meta_boxes', 'remove_thumbnail_box');
+function remove_thumbnail_box() {
+    remove_meta_box( 'postimagediv','page','side' );
+}
 /**
 Debug->>
 */

@@ -3,24 +3,24 @@
 * Get the image tag with alt/title tag
 */
 function cbv_get_image_tag( $id, $size = 'full', $title = false ){
-	if( isset( $id ) ){
-		$output = '';
-		$image_title = get_the_title($id);
-		$image_alt = get_post_meta( $id, '_wp_attachment_image_alt', true);
+  if( isset( $id ) ){
+    $output = '';
+    $image_title = get_the_title($id);
+    $image_alt = get_post_meta( $id, '_wp_attachment_image_alt', true);
     if( empty( $image_alt ) ){
       $image_alt = $image_title;
     }
-		$image_src = wp_get_attachment_image_src( $id, $size, false );
+    $image_src = wp_get_attachment_image_src( $id, $size, false );
 
-		if( $title ){
-			$output = '<img src="'.$image_src[0].'" alt="'.$image_alt.'" title="'.$image_title.'">';
-		}else{
-			$output = '<img src="'.$image_src[0].'" alt="'.$image_alt.'">';
-		}
+    if( $title ){
+      $output = '<img src="'.$image_src[0].'" alt="'.$image_alt.'" title="'.$image_title.'">';
+    }else{
+      $output = '<img src="'.$image_src[0].'" alt="'.$image_alt.'">';
+    }
 
-		return $output;
-	}
-	return false;
+    return $output;
+  }
+  return false;
 }
 
 /**
@@ -56,16 +56,16 @@ function cbv_get_image_alt( $url ){
 }
 
 function cbv_imagegrid( $image, $desc, $position = 'left' ){
-	$output = '';
-	if( !empty( $image ) && !empty( $desc ) ){
-		$output = ( $position == 'left' ) ? 
-			"<div class='df-text-rgt-img-grd-2 clearfix'>" : 
-			"<div class='df-text-lft-img-grd-2 clearfix'>";
-		$output .= '<div>' .cbv_get_image_tag( $image ). '</div>';
-		$output .= '<div>' .wpautop( $desc ). '</div>';
-		$output .= "</div>";
-	}
-	return $output;
+  $output = '';
+  if( !empty( $image ) && !empty( $desc ) ){
+    $output = ( $position == 'left' ) ? 
+      "<div class='df-text-rgt-img-grd-2 clearfix'>" : 
+      "<div class='df-text-lft-img-grd-2 clearfix'>";
+    $output .= '<div>' .cbv_get_image_tag( $image ). '</div>';
+    $output .= '<div>' .wpautop( $desc ). '</div>';
+    $output .= "</div>";
+  }
+  return $output;
 }
 function cc_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
@@ -75,7 +75,7 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 function phone_preg( $show_telefoon ){
   $replaceArray = '';
-  $spacialArry = array(".", "/", "+", " ");
+  $spacialArry = array(".", "/", "+", " ", ")", "(");
   $show_telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
   return $show_telefoon;
 }
@@ -105,7 +105,7 @@ add_action( 'admin_footer', 'wpmu_role_based_style', 99 );
 function cbv_table( $table, $title =''){
   if ( ! empty ( $table ) ) {
     echo '<div class="dfp-tbl-wrap">';
-    if( !empty($title) ) printf('<h5>%s</h5>', $title);
+    if( !empty($title) ) printf('<h6 class="fl-h6">%s</h6>', $title);
     echo '<div class="table-dsc" data-aos="fade-up" data-aos-delay="200">
     <table>';
     if ( ! empty( $table['caption'] ) ) {
@@ -197,13 +197,13 @@ function get_title_by_page_template( $pagetemplate ){
   return $post_title;
 }
 
-function shop_placeholder($format = 'src'){
+function banner_placeholder($format = 'src'){
   $placehoder = get_field('placeholder', 'options');
   if( !empty($placehoder) ){
       if( $format == 'src' ){
-        $placeholder = !empty($placehoder['shop'])? cbv_get_image_src($placehoder['shop']):'';
+        $placeholder = !empty($placehoder['default_banner'])? cbv_get_image_src($placehoder['default_banner']):'';
       }else{
-        $placeholder = !empty($placehoder['shop'])? cbv_get_image_tag($placehoder['shop']):'';
+        $placeholder = !empty($placehoder['default_banner'])? cbv_get_image_tag($placehoder['default_banner']):'';
       }
       return $placeholder;
   }
@@ -223,26 +223,13 @@ function nieuws_placeholder($format = 'src'){
   return '';
 
 }
-function coaching_placeholder($format = 'src'){
+function diensten_placeholder($format = 'src'){
   $placehoder = get_field('placeholder', 'options');
   if( !empty($placehoder) ){
       if( $format == 'src' ){
-        $placeholder = !empty($placehoder['coaching'])? cbv_get_image_src($placehoder['coaching']):'';
+        $placeholder = !empty($placehoder['diensten'])? cbv_get_image_src($placehoder['diensten']):'';
       }else{
-        $placeholder = !empty($placehoder['coaching'])? cbv_get_image_tag($placehoder['coaching']):'';
-      }
-      return $placeholder;
-  }
-  return '';
-
-}
-function referenties_placeholder($format = 'src'){
-  $placehoder = get_field('placeholder', 'options');
-  if( !empty($placehoder) ){
-      if( $format == 'src' ){
-        $placeholder = !empty($placehoder['referenties'])? cbv_get_image_src($placehoder['referenties']):'';
-      }else{
-        $placeholder = !empty($placehoder['referenties'])? cbv_get_image_tag($placehoder['referenties']):'';
+        $placeholder = !empty($placehoder['diensten'])? cbv_get_image_tag($placehoder['diensten']):'';
       }
       return $placeholder;
   }
@@ -250,6 +237,11 @@ function referenties_placeholder($format = 'src'){
 
 }
 
+add_filter( 'nav_menu_link_attributes', 'add_data_atts_to_nav', 10, 4 );
+function add_data_atts_to_nav( $atts, $item, $args ) {
+    $atts['data-to'] = '#'.strtolower(str_replace("_","",$item->title)).'-sec';
+    return $atts;
+}
 function bv_get_current_year(){
     return date('Y');
 }

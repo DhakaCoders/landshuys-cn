@@ -16,6 +16,15 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php 
+  $telephone = get_field('telephone', 'options');
+  $logoObj = get_field('hdlogo', 'options');
+  if( is_array($logoObj) ){
+    $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+  }else{
+    $logo_tag = '';
+  }
+?> 
 <div class="bdoverlay"></div>
 <header class="header">
   <div class="container">
@@ -23,9 +32,13 @@
         <div class="col-md-12">
           <div class="header-inr clearfix">
             <div class="hdr-lft">
+              <?php if( !empty($logo_tag) ): ?>
               <div class="logo">
-                <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.png"></a>
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                  <?php echo $logo_tag; ?>
+                </a>
               </div>
+              <?php endif; ?>
             </div>
             <div class="hdr-rgt">
  
@@ -35,24 +48,22 @@
 
               <div class="hdr-menu hide-md">
                 <nav class="main-nav">
-                  <ul class="clearfix reset-list">
-                    <li class="current-menu-item"><a href="#">Menukaarten</a></li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Groepsarrangementen</a>
-                      <ul class="sub-menu reset-list">
-                        <li><a href="#">Grote Kaart</a></li>
-                        <li><a href="#">Lunch en Dranken</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Restaurant</a></li>
-                    <li><a href="#">Reserveren</a></li>
-                    <li><a href="#">Contact</a></li> 
-                  </ul>
+                  <?php 
+                    $menuOptions = array( 
+                        'theme_location' => 'cbv_main_menu', 
+                        'menu_class' => 'clearfix reset-list',
+                        'container' => '',
+                        'container_class' => ''
+                      );
+                    wp_nav_menu( $menuOptions ); 
+                  ?>
                 </nav>
               </div>
+              <?php if( !empty($telefoon) ): ?>
               <div class="hdr-tel">
-                <a href="tel: +31(0) 599 354514"><img src="<?php echo THEME_URI; ?>/assets/images/tel-icon.png" alt=""></a>
+                <a href="tel:<?php echo phone_preg($telefoon); ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tel-icon.png" alt="telephone"></a> 
               </div>
+            <?php endif; ?>
               <div class="hamburgar-cntlr">
                 <span>menu</span>
                 <div class="hamburgar-icon">
@@ -74,20 +85,15 @@
   </div>
   <div class="xs-menu">
     <nav class="main-nav">
-      <ul class="clearfix reset-list">
-        <li class="current-menu-item"><a href="#">Home</a></li>
-        <li class="menu-item-has-children">
-          <a href="#">Menukaarten</a>
-          <ul class="sub-menu reset-list">
-            <li><a href="#">Kleine kaart</a></li>
-            <li><a href="#">Grote kaart</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Arrangementen</a></li>
-        <li><a href="#">Restaurant</a></li>
-        <li><a href="#">Reserveren</a></li>
-        <li><a href="#">Contact</a></li> 
-      </ul>
+      <?php 
+        $mobilemenuOptions = array( 
+            'theme_location' => 'cbv_mobile_main_menu', 
+            'menu_class' => 'clearfix reset-list',
+            'container' => '',
+            'container_class' => ''
+          );
+        wp_nav_menu( $mobilemenuOptions ); 
+      ?>
     </nav>
   </div>
 </div>
