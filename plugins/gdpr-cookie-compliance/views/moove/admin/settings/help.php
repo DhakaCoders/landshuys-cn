@@ -165,7 +165,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 		<!--  .gdpr-faq-toggle -->		
 	</div>
-	<!-- #gdpr_cbm_faq  -->
+	<!-- #gdpr_cbm_faq -->
 
 	<div id="gdpr_cbm_dh" class="gdpr-help-content-block">
 		<p><?php esc_html_e( 'Here you can find the default hooks & custom scripts available in our plugin.', 'gdpr-cookie-compliance' ); ?></p>
@@ -362,6 +362,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="gdpr-faq-toggle">
 			<div class="gdpr-faq-accordion-header">
+				<h3><?php esc_html_e( 'JavaScript consent variables', 'gdpr-cookie-compliance' ); ?></h3>
+			</div>
+			<div class="gdpr-faq-accordion-content" >
+				<?php ob_start(); ?>
+				add_action( 'wp_enqueue_scripts', function() {
+					$strict 					= false;
+					$consent_cookies 	= array();
+					if ( function_exists( 'gdpr_cookie_is_accepted' ) && gdpr_cookie_is_accepted( 'strict' ) ) :
+					  $strict = true;
+					  $contet_cookies[] = 'strict';
+					endif;
+
+					if ( function_exists( 'gdpr_cookie_is_accepted' ) && gdpr_cookie_is_accepted( 'thirdparty' ) ) :
+					  $thirdparty = true;
+					  $contet_cookies[] = 'thirdparty';
+					endif;
+
+					if ( function_exists( 'gdpr_cookie_is_accepted' ) && gdpr_cookie_is_accepted( 'advanced' ) ) :
+					  $advanced = true;
+					  $contet_cookies[] = 'advanced';
+					endif;
+
+					wp_localize_script( 'jquery', 'gdpr_consent__strict', $strict );
+					wp_localize_script( 'jquery', 'gdpr_consent__thirdparty', $thirdparty );
+					wp_localize_script( 'jquery', 'gdpr_consent__advanced', $advanced );
+					wp_localize_script( 'jquery', 'gdpr_consent__cookies', implode( '|', $contet_cookies ) );
+				});
+				<?php $code = trim( ob_get_clean() ); ?>
+				<textarea id="<?php echo esc_attr( uniqid( strtotime( 'now' ) ) ); ?>"><?php apply_filters( 'gdpr_cc_keephtml', $code, true ); ?></textarea>
+				<div class="gdpr-code"></div><!--  .gdpr-code -->
+			</div>
+			<!--  .gdpr-faq-accordion-content -->
+		</div>
+		<!--  .gdpr-faq-toggle -->
+
+		<div class="gdpr-faq-toggle">
+			<div class="gdpr-faq-accordion-header">
 				<h3><?php esc_html_e( 'Extend styles', 'gdpr-cookie-compliance' ); ?></h3>
 			</div>
 			<div class="gdpr-faq-accordion-content" >
@@ -523,6 +560,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="gdpr-faq-toggle">
 			<div class="gdpr-faq-accordion-header">
+				<h3><?php esc_html_e( 'Delay script execution', 'gdpr-cookie-compliance' ); ?></h3>
+			</div>
+			<div class="gdpr-faq-accordion-content" >
+				<?php ob_start(); ?>
+				add_filter( 'gdpr_init_script_delay', 'gdpr_delay_script_execution', 20, 1 );
+				function gdpr_delay_script_execution( $ms ) {
+					return 5000; // 5000 ms = 5 seconds.
+				}
+				<?php $code = trim( ob_get_clean() ); ?>
+				<textarea id="<?php echo esc_attr( uniqid( strtotime( 'now' ) ) ); ?>"><?php apply_filters( 'gdpr_cc_keephtml', $code, true ); ?></textarea>
+				<div class="gdpr-code"></div><!--  .gdpr-code -->
+			</div>
+			<!--  .gdpr-faq-accordion-content -->
+		</div>
+		<!--  .gdpr-faq-toggle -->	
+
+		<div class="gdpr-faq-toggle">
+			<div class="gdpr-faq-accordion-header">
 				<h3><?php esc_html_e( 'Compatibility with Pixel Your Site plugin', 'gdpr-cookie-compliance' ); ?></h3>
 			</div>
 			<div class="gdpr-faq-accordion-content" >
@@ -673,22 +728,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<!--  .gdpr-faq-accordion-content -->
 		</div>
 		<!--  .gdpr-faq-toggle -->	
-
-
-		
-
 	</div>
-	<!-- #gdpr_cbm_faq  -->
+	<!-- #gdpr_cbm_faq -->
 
 	<div id="gdpr_cbm_ph" class="gdpr-help-content-block">
 		<?php do_action( 'gdpr_tab_cbm_ph' ); ?>
 	</div>
-	<!-- #gdpr_cbm_ph  -->
+	<!-- #gdpr_cbm_ph -->
 
 	<div id="gdpr_cbm_ps" class="gdpr-help-content-block">
 		<?php do_action( 'gdpr_tab_cbm_ps' ); ?>
 	</div>
-	<!-- #gdpr_cbm_ph  -->
+	<!-- #gdpr_cbm_ph -->
 
 </div>
 <!--  .gdpr-help-content-cnt -->

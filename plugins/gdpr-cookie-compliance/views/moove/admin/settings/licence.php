@@ -4,7 +4,7 @@
  *
  * @category  Views
  * @package   gdpr-cookie-compliance
- * @author    Gaspar Nemes
+ * @author    Moove Agency
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -62,7 +62,7 @@ $gdpr_key             = function_exists( 'get_site_option' ) ? get_site_option( 
 								do_action( 'gdpr_get_alertbox', 'error', $is_valid_license, $license_key );
 							endif;
 						endif;
-					elseif ( isset( $_POST['moove_gdpr_license_key'] ) && isset( $_POST['gdpr_deactivate_license'] ) ) :
+					elseif ( isset( $_POST['gdpr_deactivate_license'] ) ) :
 						$gdpr_default_content = new Moove_GDPR_Content();
 						$option_key           = $gdpr_default_content->moove_gdpr_get_key_name();
 						$gdpr_key             = function_exists( 'get_site_option' ) ? get_site_option( $option_key ) : get_option( $option_key );

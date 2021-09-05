@@ -4,7 +4,7 @@
  *
  * @category  Moove_GDPR_Actions
  * @package   gdpr-cookie-compliance
- * @author    Gaspar Nemes
+ * @author    Moove Agency
  */
 
 if ( ! defined( 'ABSPATH' ) ) :
@@ -16,7 +16,7 @@ endif; // Exit if accessed directly.
  *
  * @category Class
  * @package  Moove_GDPR_Actions
- * @author   Gaspar Nemes
+ * @author   Moove Agency
  */
 class Moove_GDPR_Actions {
 
@@ -81,6 +81,32 @@ class Moove_GDPR_Actions {
 			<style>.gdpr-plugin-star-rating{display:inline-block;color:#ffb900;position:relative;top:3px}.gdpr-plugin-star-rating svg,.gdpr-plugin-star-rating svg:hover{fill:#ffb900}.gdpr-plugin-star-rating svg:hover~svg{fill:none}</style>
 			<?php
 		});
+		
+		add_action( 'gdpr_cookie_custom_attributes', array( &$this, 'gdpr_cc_multisite_subdomain_url' ), 99, 1);
+	}
+
+	/**
+   * Using main domain for WP MultiSite - Subdomain installs
+   * @param string $attr Cookie attributes.
+   */
+	public static function gdpr_cc_multisite_subdomain_url( $attr ) {
+		$gdpr_default_content = new Moove_GDPR_Content();
+		$option_name          = $gdpr_default_content->moove_gdpr_get_option_name();
+		$gdpr_options         = get_option( $option_name );
+
+		if ( isset( $gdpr_options['moove_gdpr_sync_user_consent'] ) && intval( $gdpr_options['moove_gdpr_sync_user_consent'] ) ) :
+			if ( function_exists( 'is_multisite' ) && is_multisite() && defined( 'SUBDOMAIN_INSTALL' ) && SUBDOMAIN_INSTALL === true ) :
+				$site_url = network_site_url();
+				$current_site_url = get_bloginfo( 'url' );
+				$p_url 		= parse_url( $site_url );
+				$domain		= $p_url && isset( $p_url['host'] ) && $p_url['host'] ? $p_url['host'] : false;
+				if ( $domain && strpos( $current_site_url, $domain ) !== false && strpos( 'domain=', $attr ) === false ) :
+					$domain = apply_filters( 'gdpr_cc_multisite_subdomain_main_domain', $domain );
+					$attr .= 'domain=.' . $domain . ';';
+				endif;
+			endif;
+		endif;
+		return $attr;
 	}
 
 	/**
@@ -375,7 +401,7 @@ class Moove_GDPR_Actions {
 					$option_key           = $gdpr_default_content->moove_gdpr_get_key_name();
 					$gdpr_key             = function_exists( 'get_site_option' ) ? get_site_option( $option_key ) : get_option( $option_key );
 					?>
-					<?php if ( isset( $gdpr_key['deactivation'] ) || $gdpr_key['activation'] ) : ?>
+					<?php if ( $gdpr_key && isset( $gdpr_key['deactivation'] ) ) : ?>
 						<p><strong><a href="<?php echo esc_url( admin_url( 'admin.php' ) ); ?>?page=moove-gdpr&amp;tab=licence" class="gdpr_admin_link">Activate your licence</a> or <a href="https://www.mooveagency.com/wordpress-plugins/gdpr-cookie-compliance/" class="gdpr_admin_link" target="_blank">buy a new licence here</a></strong></p>
 						<?php else : ?>
 							<p><strong>Do you have a licence key? <br />Insert your license key to the "<a href="<?php echo esc_url( admin_url( 'admin.php' ) ); ?>?page=moove-gdpr&amp;tab=licence" class="gdpr_admin_link">Licence Manager</a>" and activate it.</strong></p>
@@ -471,6 +497,7 @@ class Moove_GDPR_Actions {
 			'hide_save_btn'			=> $hide_save_btn,
 			'current_user'    	=> get_current_user_id(),
 			'cookie_expiration' => apply_filters( 'gdpr_cookie_expiration_days', $cookie_expiration ),
+			'script_delay'			=> apply_filters( 'gdpr_init_script_delay', 2000 ),
 		);
 
 		$ajax_script_handler = apply_filters( 'gdpr_cc_prevent_ajax_script_inject', false );

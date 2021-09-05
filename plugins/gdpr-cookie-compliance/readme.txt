@@ -1,10 +1,10 @@
 === GDPR Cookie Compliance (CCPA ready) ===
 Contributors: MooveAgency
 Donate link: https://www.mooveagency.com/wordpress-plugins/gdpr-cookie-compliance/
-Tags: GDPR, CCPA, compliance, cookie law, cookie consent
-Stable tag: 4.5.1
+Tags: GDPR, CCPA, cookie banner, cookie law, cookie consent
+Stable tag: 4.5.9
 Requires at least: 4.5
-Tested up to: 5.7
+Tested up to: 5.8
 Requires PHP: 5.6 or higher
 License: GPLv3
 
@@ -34,23 +34,14 @@ Cookie Compliance for GDPR & CCPA, European and other cookie law and consent not
 * WPML, QTranslate, WP Multilang and Polylang compatible, .pot file for translations included
 * **CDN** Base URL supported
 * Supports all major **caching** servers and plugins
-* Available in **11 languages**
+* Available in **14 languages**
 * Optimised for PHP 7.4
-
-**The plugin is especially useful in preparing your site for the following cookie law, data protection and privacy regulations:**
-* **GDPR**: The General Data Protection Regulation (European Union)
-* **PIPEDA**: The Personal Information Protection and Electronic Documents Act (Canada) 
-* **CCPA**: The California Consumer Privacy Act (California, United States)
-* **AAP**: Australia's Privacy Principles (Australia)
-* **LGPD**: The Brazilian General Data Protection Law (Brazil)
-* **DSGVO, CNIL, PECR, DPA** and other cookie law, data and privacy regulations
-
 
 ### Premium Features Available
 
 * **Cookie wall / Full-screen layout** - if enabled, the Cookie Consent Banner will be display in a full screen mode, and force users to either accept or reject cookies before they can see your content
 * **Export & import settings** - transfer your custom settings between sites with ease
-* **WordPress Multisite extension** - you can manage the plugin settings globally, and clone them from one site to another within your multi-site setup
+* **WordPress Multisite features** - you can manage the plugin settings globally, and clone them from one site to another within your multi-site setup. You can also sync users consent between individual subsites on your multisite network.
 * **Accept on Scroll / Hide timer** - allow users to accept cookies by scrolling down the page OR by setting a timer (ie. Hide banner after 5 seconds)
 * **Renew Consent** - ask users to renew their consent if there is a change in privacy or cookie policy on your site
 * **Geo-location** - if enabled, the Cookie Consent Banner will only be shown to visitors from the European Union or selected countries (ie. Canada, United States etc.)
@@ -65,7 +56,7 @@ Cookie Compliance for GDPR & CCPA, European and other cookie law and consent not
 * **Fast Premium Support** from our friendly team
 * **12 months** of premium updates included
 
-[Buy GDPR Premium Add-on here](https://www.mooveagency.com/wordpress-plugins/gdpr-cookie-compliance/)
+[Download Premium Add-on here](https://www.mooveagency.com/wordpress-plugins/gdpr-cookie-compliance/)
 
 
 ### Demo Video
@@ -88,6 +79,15 @@ You can view a demo of the plugin here:
 
 ★★★★★
 > “The best free solution for GDPR.” - [Distrix](https://wordpress.org/support/topic/the-best-free-solution-for-the-gdpr/)
+
+
+**The plugin is especially useful in preparing your site for the following cookie law, data protection and privacy regulations:**
+* **GDPR**: The General Data Protection Regulation (European Union)
+* **PIPEDA**: The Personal Information Protection and Electronic Documents Act (Canada) 
+* **CCPA**: The California Consumer Privacy Act (California, United States)
+* **AAP**: Australia's Privacy Principles (Australia)
+* **LGPD**: The Brazilian General Data Protection Law (Brazil)
+* **DSGVO, CNIL, PECR, DPA** and other cookie law, data and privacy regulations
 
 
 ### Live Examples
@@ -126,12 +126,12 @@ There are many other settings available that you can use to create your own uniq
 
 ### About us
 
-[Moove Agency](https://www.mooveagency.com/) is a premium supplier of quality WordPress plugins, services and support. [Visit our site](https://www.mooveagency.com/services/wordpress-development/) to learn more.
+[Moove Agency](https://www.mooveagency.com/) is a premium supplier of quality WordPress plugins, services and support. [Visit our site](https://www.mooveagency.com/wordpress-plugins/) to learn more.
 
 
 ### Disclaimer
 
-* THIS PLUGIN DOES NOT MAKE YOUR WEBSITE COMPLIANT. YOU ARE RESPONSIBLE FOR ENSURING THAT ALL GDPR REQUIREMENTS ARE MET ON YOUR WEBSITE.
+* THIS PLUGIN DOES NOT MAKE YOUR WEBSITE COMPLIANT. YOU ARE RESPONSIBLE FOR ENSURING THAT ALL COOKIE LAW REQUIREMENTS ARE MET ON YOUR WEBSITE.
 
 
 
@@ -158,6 +158,9 @@ https://www.example.com/your-internal-page/#gdpr_cookie_modal
 * Our plugin loads scripts using JavaScript, which is why you cannot find them when viewing the source code of the page.
 * To view the scripts, you can use the Developer Console in Chrome browser (Inspect Element feature).
 
+= Compatibility with GTM containers =
+* Our plugin fully supports GTM consent settings and containers. More details here: https://support.mooveagency.com/topic/gtm-consent-settings/
+
 = What are "Strictly Necessary Cookies"? =
 * The "Strictly Necessary Cookies", sometimes called Essential Cookies, are cookies that are necessary for your site to function properly.
 * For example, we use Strictly Necessary Cookies to save information about which cookies the user consented to.
@@ -174,9 +177,11 @@ Yes. Once you setup the plugin, you should delete the scripts you uploaded to th
 * You will find the list of popular hooks in the plugin setttings: CMS > GDPR Cookie Compliance > Help, Hooks, Filters & Shortcodes
 * You can also find the list of all [pre-defined advanced hooks here:](https://wordpress.org/support/topic/conditional-php-script/)
 
-= Does the plugin support subdomains? =
-* Unfortunately not, subdomains are treated as separate domains by browsers and the plugin is unable to alter cookies stored by another domain. 
-* If your multisite setup uses subdomain version, each subsite will be recognised as a separate domain by browsers and will create separate cookies for each subdomain.
+= Does the plugin support subdomains or subfolders on multisite network? =
+* Yes, the plugin supports subdomains on the same WordPress Multisite Network as part of our [Premium Add-on](https://www.mooveagency.com/wordpress-plugins/gdpr-cookie-compliance/)
+* We can sync users consent across your multisite network as long as your subsites are using the same domain and either folder or subdomain structure.
+* For example, if user agrees to cookies on one subsite (example.com/one/ or one.example.com), then we can automatically sync their consent and cookies will be accepted on the other subsites too (example.com/two/ or two.example.com).
+* There is only one exception where we cannot sync users consent between subsites and that's when you're using different domains (subdomains are fine). Browsers will treat each domain as separate entity and our plugin will be unable to alter cookies stored by the other domain. This is a security feature in browsers to prevent hacking.
 
 = Does this plugin block all cookies? =
 This plugin only restricts cookies for scripts that you have setup in the Settings. If you want to block all cookies, you have to add all scripts that use cookies into the Settings of this plugin. 
@@ -263,6 +268,39 @@ The Brazilian General Data Protection Law (“Lei Geral de Proteção de Dados�
 39. GDPR Cookie Compliance - Front-end - Cookie Shortcode [Premium]
 
 == Changelog ==
+= 4.5.9: 1 September 2021 =
+* copyscape auditing ?justtext=1 filter added
+* WP Multisite subdomain cookie domain filter implemented
+
+= 4.5.8: 26 July 2021 =
+* Fixed GDPR in Gutenberg Widget Editor
+
+= 4.5.7: 15 July 2021 =
+* Company logo alt improved
+* JavaScript improvements
+
+= 4.5.6: 8 June 2021 =
+* Licence manager updated
+* Setting link improved
+
+= 4.5.5: May 27, 2021
+* JavaScript click event improved
+* Bugfixes
+
+= 4.5.4: May 19, 2021 =
+* New hook to delay script execution
+* WooCommerce cookie removal improved
+* Code improvements
+* Bugfixes
+
+= 4.5.3: May 5, 2021 =
+* Company logo details query performance improved
+* Cookie removal feature improved
+
+= 4.5.2: April 14, 2021 =
+* Cookie removal feature improved
+* Cookie insert feature improved
+
 = 4.5.1: March 29, 2021 =
 * jQuery dependency restored
 * Extended help section with hook to remove jQuery dependency

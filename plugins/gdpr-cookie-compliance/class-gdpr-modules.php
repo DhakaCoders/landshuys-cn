@@ -4,7 +4,7 @@
  *
  * @category GDPR_Modules
  * @package   gdpr-cookie-compliance
- * @author    Gaspar Nemes
+ * @author    Moove Agency
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @category Class
  * @package  Moove_Modules
- * @author   Gaspar Nemes
+ * @author   Moove Agency
  */
 class GDPR_Modules {
 	/**
@@ -134,7 +134,7 @@ class GDPR_Modules {
 		$_content .= '<p>' . sprintf( esc_html__( 'You can find out more about which cookies we are using or switch them off in [%s]settings[/%s].', 'gdpr-cookie-compliance' ), 'setting', 'setting' ) . '</p>';
 
 		$content            = isset( $modal_options[ 'moove_gdpr_info_bar_content' . $wpml_lang ] ) && $modal_options[ 'moove_gdpr_info_bar_content' . $wpml_lang ] ? $modal_options[ 'moove_gdpr_info_bar_content' . $wpml_lang ] : $_content;
-		$content            = str_replace( '[setting]', '<span data-href="#moove_gdpr_cookie_modal" class="change-settings-button">', $content );
+		$content            = str_replace( '[setting]', '<span role="link" tabindex="0" data-href="#moove_gdpr_cookie_modal" class="change-settings-button">', $content );
 		$content            = str_replace( '[/setting]', '</span>', $content );
 		$content            = apply_filters( 'gdpr_info_bar_notice_content', $content );
 		$data               = new stdClass();
@@ -167,8 +167,8 @@ class GDPR_Modules {
 		$data->wpml_lang = $wpml_lang;
 		$data->logo_url  = isset( $modal_options['moove_gdpr_company_logo'] ) && $modal_options['moove_gdpr_company_logo'] ? $modal_options['moove_gdpr_company_logo'] : plugin_dir_url( __FILE__ ) . 'dist/images/gdpr-logo.png';
 		$data->logo_url  = str_replace( plugin_dir_url( __FILE__ ) . 'dist/images/moove-logo.png', plugin_dir_url( __FILE__ ) . 'dist/images/gdpr-logo.png', $data->logo_url );
-		$logo_details 			= gdpr_get_logo_details( $data->logo_url );
-		$data->logo_alt  		= gdpr_get_logo_alt( $data->logo_url );
+		$logo_details 			= gdpr_get_logo_details( $data->logo_url, $modal_options );
+		$data->logo_alt  		= gdpr_get_logo_alt( $data->logo_url, $modal_options );
 		$data->logo_width 	= isset( $logo_details['width'] ) ? $logo_details['width'] : false;
 		$data->logo_height 	= isset( $logo_details['height'] ) ? $logo_details['height'] : false;
 		$data->logo_url 		= isset( $logo_details['logo_url'] ) ? $logo_details['logo_url'] : $data->logo_url;
