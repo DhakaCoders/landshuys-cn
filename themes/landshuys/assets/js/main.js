@@ -67,7 +67,7 @@ if( $('.hamburgar-cntlr').length ){
 if (windowWidth > 767) {
   if( $('.hm-page-banner').length ){
     var windowHeight = $(window).height();
-    if (windowHeight > 735) {
+    if (windowHeight < 735) {
       $('.hm-page-banner').css('height', windowHeight);
     }
   }
