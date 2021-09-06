@@ -152,7 +152,8 @@
 	line-height: 1.3;
 	position: relative;
 }
-.ftr-col-opening-star ul li:after{
+.ftr-col-opening-star ul li:after,
+.ftr-col-opening-hours ul li.opening-star:after{
 	position: absolute;
 	content: "*";
 	top: 6px;

@@ -263,6 +263,10 @@
 .opacity{
 	opacity: .5;
 }
+.post-items.full-block-post {
+    max-width: initial !important;
+    width: 100% !important;
+}
 /*== pagination end ==*/
 
 

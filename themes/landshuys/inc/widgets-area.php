@@ -2,13 +2,13 @@
 
 function deploy_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar Widget', 'ash' ),
-		'id'            => 'shop-widget',
-		'description'   => __( 'Add widgets here to appear in your blog page.', 'ash' ),
-		'before_widget' => '<div class="sidebar-widget">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>',
+		'name'          => __( 'Sidebar Widget', 'Landshuys' ),
+		'id'            => 'post-widget',
+		'description'   => __( 'Add widgets here to appear in your blog page.', 'Landshuys' ),
+		'before_widget' => '<aside><div class="sidebar-widget">',
+		'after_widget'  => '</div></aside>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'deploy_widgets_init' );

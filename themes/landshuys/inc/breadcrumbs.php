@@ -2,7 +2,7 @@
 function cbv_breadcrumbs() {
   /* === OPTIONS === */
   $text['home']     = __('Home', THEME_NAME); // text for the 'Home' link
-  $text['blog']     = __('Nieuws', THEME_NAME); // text for the 'Home' link
+  $text['blog']     = __('Blog', THEME_NAME); // text for the 'Home' link
   $text['category'] = __('Archive by Category "%s"', THEME_NAME); // text for a category page
   $text['search']   = __('Search Results for "%s"', THEME_NAME); // text for a search results page
   $text['tag']      = __('Posts Tagged "%s"', THEME_NAME); // text for a tag page

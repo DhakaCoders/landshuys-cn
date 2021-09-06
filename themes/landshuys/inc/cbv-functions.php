@@ -210,39 +210,30 @@ function banner_placeholder($format = 'src'){
   return '';
 
 }
-function nieuws_placeholder($format = 'src'){
+function blog_placeholder($format = 'src'){
   $placehoder = get_field('placeholder', 'options');
   if( !empty($placehoder) ){
       if( $format == 'src' ){
-        $placeholder = !empty($placehoder['nieuws'])? cbv_get_image_src($placehoder['nieuws']):'';
+        $placeholder = !empty($placehoder['blog'])? cbv_get_image_src($placehoder['blog']):'';
       }else{
-        $placeholder = !empty($placehoder['nieuws'])? cbv_get_image_tag($placehoder['nieuws']):'';
+        $placeholder = !empty($placehoder['blog'])? cbv_get_image_tag($placehoder['blog']):'';
       }
       return $placeholder;
   }
   return '';
 
-}
-function diensten_placeholder($format = 'src'){
-  $placehoder = get_field('placeholder', 'options');
-  if( !empty($placehoder) ){
-      if( $format == 'src' ){
-        $placeholder = !empty($placehoder['diensten'])? cbv_get_image_src($placehoder['diensten']):'';
-      }else{
-        $placeholder = !empty($placehoder['diensten'])? cbv_get_image_tag($placehoder['diensten']):'';
-      }
-      return $placeholder;
-  }
-  return '';
-
-}
-
-add_filter( 'nav_menu_link_attributes', 'add_data_atts_to_nav', 10, 4 );
-function add_data_atts_to_nav( $atts, $item, $args ) {
-    $atts['data-to'] = '#'.strtolower(str_replace("_","",$item->title)).'-sec';
-    return $atts;
 }
 function bv_get_current_year(){
     return date('Y');
 }
 add_shortcode( 'cyear', 'bv_get_current_year' );
+
+function cbv_get_excerpt(){
+  global $post;
+  $link = '<a href="'. get_permalink($post->ID) . '">'.__(' ....more', 'landshuys').'</a>';
+  $excerpt = explode(' ', get_the_excerpt());
+  //array_pop($excerpt);
+  $excerpt = implode(" ",$excerpt);
+  $excerpt .= $link;
+  return wpautop($excerpt);
+}

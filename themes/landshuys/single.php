@@ -2,6 +2,8 @@
 $thisID = get_the_ID();
 $imgID = get_field('banner_image', $thisID);
 $customtitle = get_field('custom_page_title', $thisID);
+$ishide_sidebar = get_field('ishide_sidebar', $thisID);
+$fullblock = $ishide_sidebar? ' full-block-post': '';
 $banner = !empty($imgID)?cbv_get_image_src($imgID):banner_placeholder();
 $post_title = !empty($customtitle)? $customtitle: get_the_title($thisID);
 ?>
@@ -22,16 +24,20 @@ $post_title = !empty($customtitle)? $customtitle: get_the_title($thisID);
   </div>
 </section>
 <?php get_template_part('templates/breadcrumbs', 'sec'); ?>
+<?php 
+$imgID = get_post_thumbnail_id(get_the_ID());
+$imgtag = !empty($imgID)? cbv_get_image_tag($imgID): blog_placeholder('tag');
+?>
 <section class="page-content section-divider">
   <div class="posts-section">
     <div class="container">
       <div class="row">
         <div class="col-md-12"> 
           <div class="post-sec-cntrl">
-            <div class="post-items">
+            <div class="post-items<?php echo $fullblock; ?>">
               <article class="post-item clearfix">
                 <div class="post-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/BadkamerNoorderdiep-150x150.jpg">
+                  <?php echo $imgtag; ?>
                 </div>
                 <div class="post-des">
                   <?php 
@@ -41,41 +47,11 @@ $post_title = !empty($customtitle)? $customtitle: get_the_title($thisID);
                 </div>
               </article>
             </div>    
-
+            <?php if( !$ishide_sidebar): ?>
             <div class="right-sidebar mgleftm">
-              <aside class="search-wrp widget">
-                <div class="sidebar-widget">
-                  <form class="search-form">
-                    <div class="search">
-                      <label>
-                        <input type="search" placeholder="Search...">
-                        <input type="submit" value="">
-                      </label>
-                    </div>
-                  </form>
-                </div>
-              </aside>
-              <aside>
-                <div class="sidebar-widget">
-                  <h3>Recent post</h3>
-                  <ul class="clearfix reset-list">
-                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                  </ul>
-                </div>
-              </aside>
-              <aside>
-                <div class="sidebar-widget">
-                  <h3>Recent post</h3>
-                  <ul class="clearfix reset-list">
-                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                  </ul>
-                </div>
-              </aside>
+              <?php get_sidebar(); ?>
             </div>
+            <?php endif; ?>
           </div>
         </div>  
       </div>

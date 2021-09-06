@@ -36,8 +36,7 @@ if( !function_exists('cbv_theme_setup') ){
 
         register_nav_menus( array(
             'cbv_main_menu' => __( 'Main Menu', 'landshuys' ),
-            'cbv_mobile_main_menu' => __( 'Mobile Menu', 'landshuys' ),
-            'cbv_copyright_menu' => __( 'Copyright Menu', 'landshuys' ),
+            'cbv_mobile_main_menu' => __( 'Mobile Menu', 'landshuys' )
         ) );
 
     }
@@ -53,12 +52,7 @@ function cbv_theme_scripts(){
     include_once( THEME_DIR . '/enq-scripts/bootstrap.php' );
     include_once( THEME_DIR . '/enq-scripts/fonts.php' );
     if( !is_front_page() ) include_once( THEME_DIR . '/enq-scripts/fancybox.php' );
-    include_once( THEME_DIR . '/enq-scripts/slick.php' );
-   // include_once( THEME_DIR . '/enq-scripts/swiper.php' );
-    include_once( THEME_DIR . '/enq-scripts/matchheight.php' );
-    include_once( THEME_DIR . '/enq-scripts/select2.php' );
-    //include_once( THEME_DIR . '/enq-scripts/animate.php' );
-    //if( !is_front_page() ) include_once( THEME_DIR . '/enq-scripts/jqueryui.php' );
+    //include_once( THEME_DIR . '/enq-scripts/matchheight.php' );
     include_once( THEME_DIR . '/enq-scripts/theme.default.php' );
 }
 
@@ -98,7 +92,10 @@ function is_blog () {
 add_post_type_support( 'page', 'excerpt' );
 
 add_filter('use_block_editor_for_post', '__return_false');
-
+// Disables the block editor from managing widgets in the Gutenberg plugin.
+add_filter( 'gutenberg_use_widgets_block_editor', '__return_false', 100 );
+// Disables the block editor from managing widgets.
+add_filter( 'use_widgets_block_editor', '__return_false' );
 function defer_parsing_of_js ( $url ) {
     if ( FALSE === strpos( $url, '.js' ) ) return $url;
     if ( strpos( $url, 'jquery.js' ) || strpos( $url, 'jquery-migrate.min.js' ) ) return $url;
@@ -154,18 +151,6 @@ function custom_body_classes($classes){
 add_filter('body_class', 'custom_body_classes');
 
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
-
-if( !function_exists('cbv_custom_both_breadcrump')){
-  function cbv_both_breadcrump(){
-    if ( is_product_category() || is_product() || is_shop() || is_cart() || is_checkout()
-       || is_woocommerce() || is_product_tag() || is_account_page() || is_wc_endpoint_url()
-       || is_ajax()) {
-                woocommerce_breadcrumb();
-            }else{
-                cbv_breadcrumbs();
-            }
-    }
-}
 
 function custom_post_type_query($query) {
     if (!is_admin() && $query->is_main_query()){
