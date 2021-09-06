@@ -59,9 +59,9 @@
                   ?>
                 </nav>
               </div>
-              <?php if( !empty($telefoon) ): ?>
+              <?php if( !empty($telephone) ): ?>
               <div class="hdr-tel">
-                <a href="tel:<?php echo phone_preg($telefoon); ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tel-icon.png" alt="telephone"></a> 
+                <a href="tel:<?php echo phone_preg($telephone); ?>"><img src="<?php echo THEME_URI; ?>/assets/images/tel-icon.png" alt="telephone"></a> 
               </div>
             <?php endif; ?>
               <div class="hamburgar-cntlr">
