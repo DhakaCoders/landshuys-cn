@@ -65,7 +65,7 @@
               </div>
             <?php endif; ?>
               <div class="hamburgar-cntlr">
-                <span>menu</span>
+                <span><?php _e('menu', 'landshuys'); ?></span>
                 <div class="hamburgar-icon">
                   <span></span>
                   <span></span>
