@@ -106,8 +106,8 @@
     letter-spacing: 2px;
 }
 .cnt-form-btn:hover{
-	background: transparent;
-	color: #312828;
+	background: #2b3e1e;
+	border-color: #2b3e1e;
 }
 .wpcf7-not-valid-tip {
 	font-weight: 300;
