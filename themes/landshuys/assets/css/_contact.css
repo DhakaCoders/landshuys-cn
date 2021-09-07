@@ -45,6 +45,7 @@
 	height: 200px;
 	padding-top: 15px;
 	display: block;
+	resize: none;
 }
 .input-field input[type="text"]::placeholder,
 .input-field input[type="email"]::placeholder,
