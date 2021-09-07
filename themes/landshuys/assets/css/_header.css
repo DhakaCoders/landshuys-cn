@@ -15,9 +15,6 @@
 	top: 0;
 	left: 0;
 }
-.logo{
-
-}
 .logo a{
 	display: inline-block;
 }
@@ -27,30 +24,6 @@
 	align-items: center;
 	flex-wrap: wrap;
 }
-/*.hdr-country{
-	padding-right: 16px;
-}
-.hdr-country ul li{
-	padding: 0 5px;
-}
-.country-item{
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-}
-.country-name{
-	padding-right: 12px;
-	color: #fff;
-	font-family: 'Vollkorn', serif;
-	font-weight: 400;
-	font-size: 15px;
-	text-transform: capitalize;
-	display: inline-block;
-}
-.country-flag{
-
-}*/
-/*language*/
 .hdr-language{
 	padding-right: 16px;
 }
@@ -73,23 +46,10 @@
 .hdr-language a:hover{
 	color: #e0b870;
 }
-
-
-/*language*/
-
-
 .hdr-menu{
 	padding: 0 32px;
 	background: url('../images/menu-overlay.png');
 	background-repeat: repeat;
-}
-
-
-nav.main-nav ul{
-
-}
-nav.main-nav ul li{
-	
 }
 nav.main-nav ul li a{
 	color: #fff;
@@ -137,14 +97,6 @@ nav.main-nav > ul > li > a:hover,
 nav.main-nav > ul > li.menu-item-has-children:hover a,
 nav.main-nav > ul > li.current-menu-item > a{
 	color: #e0b870;
-}
-
-nav.main-nav > ul > li.menu-item-has-children > a{
-
-}
-
-nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
-	
 }
 
 nav.main-nav > ul > li.menu-item-has-children ul.sub-menu {
@@ -347,9 +299,6 @@ body.allWork .hamburgar-cross{
 		font-size: 21px;
 	}
 }
-@media (max-width: 1499px){
-
-}
 @media (max-width: 1399px){
 	.hdr-menu{
 		padding: 0 15px;
@@ -360,9 +309,6 @@ body.allWork .hamburgar-cross{
 	.hdr-language {
 		padding-right: 15px;
 	}
-}
-@media (max-width: 1299px){
-	
 }
 @media (max-width: 1199px){
 	.logo a{
@@ -486,6 +432,12 @@ body.allWork .hamburgar-cross{
 		max-width: 24px;
 		height: auto;
 	}
+	nav.main-nav > ul > li > a{
+		font-size: 34px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
+		font-size: 27px;
+	}
 }
 @media (max-width: 479px){
 	.logo a{
@@ -520,5 +472,11 @@ body.allWork .hamburgar-cross{
 	}
 	.hamburgar-icon span:nth-child(3) {
 		top: 14px;
+	}
+	nav.main-nav > ul > li > a{
+		font-size: 30px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
+		font-size: 24px;
 	}
 }
