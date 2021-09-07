@@ -251,7 +251,12 @@
 	    padding: 30px 0 20px;
 	}
 	.hm-lftimg-rgtdes-sec{
-		padding-bottom: 40px;
+		padding-bottom: 32px;
+		padding-top: 20px;
+	}
+	.hm-des-btm{
+		height: 40px;
+    	margin-bottom: -40px;
 	}
 	.hm-rgt-des-ctlr{
 		width: 100%;
@@ -277,10 +282,10 @@
 		overflow: hidden;
 	}
 	.hm-lft-des-title{
-		margin-bottom: 10px;
+		margin-bottom: 12px;
 	}
 	.hm-lftimg-rgtdes-title{
-		margin-bottom: 10px;
+		margin-bottom: 12px;
 	}
 	.hm-lftimg-rgtdes-sec-inr{
 		display: block;
