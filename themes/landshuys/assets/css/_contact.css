@@ -39,7 +39,7 @@
 	border-color: #807c7c!important;
 }
 .right-sidebar .sidebar-widget input[type="submit"]:hover{
-	opacity: .7;
+	opacity: 1;
 }
 .input-field textarea{
 	height: 200px;

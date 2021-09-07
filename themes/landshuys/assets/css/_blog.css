@@ -103,7 +103,7 @@
 	list-style: none;
 }
 .sidebar-widget ul li{
-	padding-bottom: 5px;
+	padding-bottom: 7px;
 	font-size: 16px;
 }
 .sidebar-widget ul li a{
@@ -144,16 +144,20 @@
     position: absolute;
     background: url(../images/search-icon.png);
     background-repeat: no-repeat;
-    width: 16px;
-    height: 15px;
+    background-position: center center;
+    width: 38px;
+    height: 40px;
     border: 0;
-    left: 14px;
-    top: 12px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 15px 5px;
     margin-top: 0;
     cursor: pointer;
     text-indent: -99999px;
     font-size: 0;
-    line-height: 0;
+    line-height: 1;
+    z-index: 5;
 }
 .right-sidebar .screen-reader-text{
 	display: none;
