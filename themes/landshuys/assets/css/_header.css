@@ -487,14 +487,38 @@ body.allWork .hamburgar-cross{
 		height: auto;
 	}
 }
-/*@media (max-width: 479px){
-	nav.main-nav > ul > li > a{
-		font-size: 28px;
+@media (max-width: 479px){
+	.logo a{
+		max-width: 100px;
 	}
-	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
-		padding-bottom: 40px;
+	.hdr-tel {
+		height: 40px;
+		width: 40px;
+		margin-right: 10px;
 	}
-	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
-		font-size: 24px;
+	.hdr-tel a{
+		max-width: 19px;
+		line-height: 1;
 	}
-}*/
+	.hamburgar-cntlr {
+		width: 100px;
+		height: 40px;
+	}
+	.hamburgar-cntlr > span{
+		padding-right: 8px;
+		font-size: 18px;
+		padding-top: 1px;
+	}
+	.hamburgar-icon{
+		height: 17px;
+	}
+	.hamburgar-icon span{
+		height: 3px;
+	}
+	.hamburgar-icon span:nth-child(2){
+		top: 7px;
+	}
+	.hamburgar-icon span:nth-child(3) {
+		top: 14px;
+	}
+}
