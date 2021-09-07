@@ -5,10 +5,6 @@
 .page-404-wrp {
     margin-top: 40px;
 }
-
-/* 
-404
- */
 .page-404 {
     min-height: 400px;
 }
@@ -19,7 +15,6 @@
 	font-size: 28px;
 }
 
-/* index page */
 .posts-section{
 	padding-top: 0;
 }
@@ -108,7 +103,7 @@
 	list-style: none;
 }
 .sidebar-widget ul li{
-	padding-bottom: 5px;
+	padding-bottom: 7px;
 	font-size: 16px;
 }
 .sidebar-widget ul li a{
@@ -125,7 +120,6 @@
 .post-des.sp-detail{
 	padding-bottom: 15px;
 }
-/*search*/
 .search-form label{
 	display: block;
 	position: relative;
@@ -146,23 +140,24 @@
 	border: 1px solid #000;
 	border-radius: 2px;
 }
-/*.search-form .search input[type="search"] {
-    background: transparent;
-}*/
 .right-sidebar .sidebar-widget input[type="submit"] {
     position: absolute;
     background: url(../images/search-icon.png);
     background-repeat: no-repeat;
-    width: 16px;
-    height: 15px;
+    background-position: center center;
+    width: 38px;
+    height: 40px;
     border: 0;
-    left: 14px;
-    top: 12px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 15px 5px;
     margin-top: 0;
     cursor: pointer;
     text-indent: -99999px;
     font-size: 0;
-    line-height: 0;
+    line-height: 1;
+    z-index: 5;
 }
 .right-sidebar .screen-reader-text{
 	display: none;
@@ -170,13 +165,6 @@
 .right-sidebar .sidebar-widget label{
 	width: 100%;
 }
-
-
-
-
-/* ===================== */
-/*== pagination start ==*/
-/* =================== */
 .fl-pagi-cntlr{
 	display: flex;
 	justify-content: center;
@@ -258,7 +246,6 @@
 .fl-pagi-cntlr .prev:hover,
 .fl-pagi-cntlr .next:hover{
 	background: #312828!important;
-	/* border: 1px solid #fff; */
 }
 .opacity{
 	opacity: .5;
@@ -267,7 +254,6 @@
     max-width: initial !important;
     width: 100% !important;
 }
-/*== pagination end ==*/
 
 
 
@@ -343,18 +329,7 @@
 	}
 }
 
-@media(max-width: 575px){
-	
-
-}
-
 @media(max-width: 479px){
 	.page-404 h1{
 		font-size: 40px;
 	}
-
-}
-
-@media(max-width: 359px){
-	
-}
