@@ -25,8 +25,7 @@
 	border: 1px solid #C6C6C6;
 	width: 100%;
 	height: 50px;
-	color: #545050;
-	font-family: 'Roboto', sans-serif;	
+	color: #545050;	
 	font-weight: 400;
 	font-size: 18px;
 	background-color: #F9F9F9;
@@ -51,28 +50,28 @@
 .input-field input[type="email"]::placeholder,
 .input-field textarea::placeholder{
 	color: #828282;
-	font-weight: 100;
+	font-weight: 300;
 	opacity: 1;
 }
 .input-field input[type="text"]::-webkit-input-placeholder,
 .input-field input[type="email"]::-webkit-input-placeholder,
 .input-field textarea::-webkit-input-placeholder{
 	color: #828282;
-	font-weight: 100;
+	font-weight: 300;
 	opacity: 1;
 }
 .input-field input[type="text"]::-moz-placeholder,
 .input-field input[type="email"]::-moz-placeholder,
 .input-field textarea::-moz-placeholder{
 	color: #828282;
-	font-weight: 100;
+	font-weight: 300;
 	opacity: 1;
 }
 .input-field input[type="text"]:-ms-input-placeholder,
 .input-field input[type="email"]:-ms-input-placeholder,
 .input-field textarea:-ms-input-placeholder{
 	color: #828282;
-	font-weight: 100;
+	font-weight: 300;
 	opacity: 1;
 }
 .input-field input[type="text"]:-moz-placeholder,
