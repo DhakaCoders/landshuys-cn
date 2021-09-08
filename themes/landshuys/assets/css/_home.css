@@ -213,11 +213,11 @@
 		margin-right: auto;
 	}
 	.hm-lft-img{
-		width: 45%;
+		width: 38%;
 	    margin-left: -22px;
 	}
 	.hm-rgt-des-ctlr{
-		width: 55%;
+		width: 62%;
 	}
 	.hm-rgt-des{
 		padding-left: 35px;
@@ -239,6 +239,15 @@
 	    margin-top: 0;
 	}
 	
+}
+@media(max-width: 850px){
+	.hm-lft-img {
+	    width: 45%;
+	    margin-left: -15px;
+	}
+	.hm-rgt-des-ctlr {
+	    width: 55%;
+	}
 }
 @media(max-width: 767px){
 	.hm-page-banner {
