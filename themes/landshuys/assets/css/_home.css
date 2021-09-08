@@ -237,7 +237,7 @@
 	}
 	.hm-lft-img{
 		width: 38%;
-	    margin-left: -20px;
+	    margin-left: -15px;
 	}
 	.hm-rgt-des-ctlr{
 		width: 62%;
@@ -245,8 +245,9 @@
 	.hm-rgt-des{
 		padding-left: 35px;
 	    margin-left: -30px;
-	    max-width: 100%;
-	    width: 100%;
+	    max-width: initial;
+	    width: auto;
+	    margin-right: -10px;
 	}
 	.hm-des-top{
 		left: -50px;
@@ -265,7 +266,7 @@
 	}
 	
 }
-@media(max-width: 850px){
+@media(max-width: 899px){
 	.hm-lft-img {
 	    width: 45%;
 	}
